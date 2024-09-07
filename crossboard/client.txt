@@ -1,0 +1,32 @@
+
+ This code implements a simple client-server application for a crossword puzzle game. The client connects to the server, authenticates with a username and password, and then plays a crossword puzzle game.
+
+Here's a breakdown of the code:
+
+Client class:
+
+The Client class represents the client-side application. It includes methods for connecting to the server, sending and receiving data, and handling user interactions.
+
+Constructor: The constructor initializes the client socket and stores the server's IP address and port number.
+
+start() method: This method starts the main loop of the client application. It prompts the user to choose an option (login, register, or exit) and handles the corresponding actions.
+
+login() method: This method handles the login process. It sends a login message to the server, followed by the username and hashed password. It then waits for the server's response and displays an appropriate message.
+
+handleLogin() method: This method handles the server's response to the login request. It checks the response and prints a welcome message if the login is successful.
+
+registerUser() method: This method handles the registration process. It sends a register message to the server, followed by the username and hashed password. It then waits for the server's response and displays an appropriate message.
+
+handleRegistration() method: This method handles the server's response to the registration request. It checks the response and prints a welcome message if the registration is successful.
+
+printWelcomeMessage() method: This method displays a welcome message and prompts the user to select a crossword puzzle board.
+
+hashPassword() method: This method applies a simple hashing function to the password, transforming it into a string that is sent to the server for authentication.
+
+Main function:
+
+The main() function creates an instance of the Client class and calls its start() method to start the client application.
+
+Overall structure:
+
+The code is structured into a client-server model, with the client communicating with the server to perform various actions, such as authentication and gameplay. The client sends messages to the server using the send() function and receives responses using the recv() function. The server handles the client requests and sends appropriate responses back to the client.

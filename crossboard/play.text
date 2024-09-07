@@ -1,0 +1,53 @@
+
+
+
+Function Overview:
+
+The play function implements the main gameplay loop for the crossword puzzle game. It takes the game board, list of clues, board dimensions, and current player coordinates as input. It guides the player through solving clues, updating the board, and checking for completion.
+
+Function Breakdown:
+
+Initialization:
+
+Declare variables to track solved clues (wasFound), available clues (checkFound), and gameOver counter
+Update Board:
+
+Call the updatef function to update the board based on the clues
+Display Board:
+
+Call the showf function to display the updated board
+Clue Selection:
+
+Display a list of available clues with their corresponding number, direction, row, column, and hint
+Input Validation:
+
+Prompt the user to enter the clue number they want to solve
+Handle invalid inputs (less than 1 or -1 to exit)
+Clue Verification:
+
+Check if the selected clue has already been solved
+Check if the selected clue is still available
+Display error messages for invalid selections
+Clue Solution:
+
+Display the current hint for the selected clue
+Prompt the user to enter their solution
+Convert the user's input to uppercase for consistent comparison
+Answer Evaluation:
+
+Compare the user's answer to the actual clue word
+Display an error message for incorrect answers and show the updated board
+Correct Answer Handling:
+
+Display a congratulatory message for correct answers
+Mark the clue as solved (wasFound)
+Mark the clue as unavailable (checkFound)
+Update the board with the correct answer
+Show the updated board
+Increment the gameOver counter
+Game Completion:
+
+Check if all clues have been solved (gameOver equals words)
+Display a victory message if the game is complete
+Exit Game:
+Exit the function if the user entered -1
